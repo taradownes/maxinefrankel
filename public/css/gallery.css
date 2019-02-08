@@ -1,4 +1,4 @@
-#masonry {
+/* #masonry {
   column-count: 1;
   column-gap: 1em;
 }
@@ -45,7 +45,7 @@
   width: 100%;
   margin-bottom: -4px;
   
-  /*idk why but this fix stuff*/
+  /*idk why but this fix stuff
 }
 
 .item.active {
@@ -130,5 +130,4 @@
   width: auto;
   max-height: 95vh;
   opacity:1;
-  }
-}
+  } */

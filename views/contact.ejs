@@ -1,59 +1,59 @@
 <!DOCTYPE HTML>
 
 <html>
- <head>
-   <link href="../public/css/style1.css" rel="stylesheet"> 
-   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Raleway" rel="stylesheet">
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"  integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container-fluid header">
-	<h1 class="title">Maxine Frankel <span>Art</span></h1>
+    <head>
+        <title>Maxine Freeman Art</title>
+       <link href="../public/css/style1.css" rel="stylesheet"> 
+       <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Raleway|Allura" rel="stylesheet">
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"  integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    </head>
+    <body>
+    
+        <div class="top">
+          <div class="overlay">
+             <div class="menu">
+              <ul class="menu-items">
+                <li class="item">
+                  <a href="/gallery">GALLERY</a>
+                </li>
+                <li class="item">
+                  <a href="/contact">CONTACT</a>
+                </li>
+              </ul>
+              <i class="fas fa-bars" id="bar"></i>
+            </div>
+          </div>
+        </div>
+
+<div class="contactpage">
+
+
+
+<div class="contactmain"> 
+    <h1>Interested in exisiting piece of art? A Custom piece?</h1>
+    <h1>Contact Maxine Freeman below!</h1>
+    <a href="#contact"><i class="fas fa-arrow-circle-down"></i></a>
 </div>
 
-<div class="top">
-  <div class="overlay">
-   <div class="menu">  
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link" href="/">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/gallery">GALLERY</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="active" href="/contact">CONTACT</a>
-      </li>
-    </ul>
-   </div>
- </div>
-</div>
 
-<div class="container contact">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="container contactpage">
-        <h2>If you are interested in Maxine's Art or have a question about a current or future piece of work, please contact Maxine by filling out the form below!</h2><br>
-        <form action="/contact" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Name.." required><br>
-            <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email.." required><br>
-            <label for="message">Message</label>
-            <textarea type="text" name="message" placeholder="Message..." required></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
+<div class="contact" id="contact">
+        <div class="contactform">
+          <h2>Contact Maxine</h2><br>
+          <form action="/contact" method="POST">
+              <input type="text" name="name" placeholder="Name" required><br>
+              <input type="email" name="email" placeholder="Email" required><br>
+              <textarea type="text" name="message" placeholder="Message" required></textarea><br>
+              <input type="submit" value="Submit">
+          </form>
       </div>
-    </div>
   </div>
-</div>
 
-
-<div class="footer">
-    <div class="stripe">
+  <div class="footer">
       <ul>
         <li>Maxine Frankel</li>
         <li>|</li>
@@ -61,18 +61,16 @@
         <li>|</li>
         <li>Chicago, IL</li>
       </ul>
-    </div>
+    </div>   
+
   </div>
-  
-  </div>  
-
-
+  </body>
 
   
+  <script src="../public/js/gallery.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-</body>
 </html>

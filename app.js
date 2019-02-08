@@ -1,10 +1,23 @@
 const express = require("express"),
 	  bodyParser = require("body-parser"),
-	  nodemailer = require("nodemailer"),
+      nodemailer = require("nodemailer"),
+      mongoose = require('mongoose'),
+      exphbs = require('express-handlebars')
 	  app = express();
 
 
-app.set("view engine", "ejs");
+
+//mongoose
+mongoose.connect('mongodb://localhost:27017/maxineart', {
+    useNewUrlParser: true
+})
+.then(() => console.log('MongoDB Connected...'))
+.catch(err => console.log(err));
+
+//ADD Gallery model
+
+
+app.set("view engine", "handlebars");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -15,11 +28,19 @@ app.use(express.static(__dirname));
 //Routes
 
 app.get("/", function(req, res){
-	res.render('index');
+    res.render('index');
 });
+
+app.get("/main", function(req, res){
+    res.render('main');
+})
 
 app.get("/gallery", function(req, res){
 	res.render('gallery');
+});
+
+app.get('/gallery/add', function(req, res){
+    res.render("add")
 });
 
 app.get("/contact", function(req, res){
@@ -76,10 +97,10 @@ app.post("/contact", function(req, res){
 
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("server started");
-});
-
-// app.listen(3000, function(){
+// app.listen(process.env.PORT, process.env.IP, function(){
 //     console.log("server started");
 // });
+
+app.listen(2000, function(){
+    console.log("server started");
+});

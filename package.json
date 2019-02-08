@@ -11,8 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.2.1",
     "ejs": "^2.6.1",
     "express": "*",
-    "nodemailer": "^4.6.8"
+    "express-handlebars": "^3.0.0",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.4.10",
+    "nodemailer": "^4.6.8",
+    "popper.js": "^1.14.7"
   }
 }

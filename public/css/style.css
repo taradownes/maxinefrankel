@@ -1,7 +1,7 @@
 body {
   background-color: black;
   background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/paint-palette-1517611331.jpg");
-  ground-size: cover;
+  background-size: cover;
   background-position: 80% 0%; }
 
 * {
@@ -59,6 +59,11 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%; }
 
+
+
+
+
+    /* 
 main {
   background-color: rgba(255, 255, 255, 0.7);
   display: grid;
@@ -100,6 +105,6 @@ main {
     main .caption ul {
       list-style: none;
       padding-top: 5%;
-      font-size: 1.5vw; }
+      font-size: 1.5vw; } */
 
 /*# sourceMappingURL=style.css.map */
