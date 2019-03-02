@@ -1,0 +1,18 @@
+<div class="page">
+    <div class="addpage">
+        <div class="add">
+
+            <form action="/edit/:{{id}}" id="uploadbanner" enctype="multipart/form-data" method="POST" class="add-form">
+            <h1>Add a Gallery Image</h1>
+                <input id="fileupload" type="file" name="image" value="{{image}}">
+                <input type="text" placeholder="Painting Title" name="title" required value="{{title}}">
+                <input type="text" placeholder="Painting Style" name="style" required value="{{style}}">
+                <input type="text" placeholder="Date" name="date" required value="{{date}}">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    {{> _footer}}
+    </div>
+</div>
+

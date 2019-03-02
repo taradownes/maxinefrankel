@@ -8,33 +8,8 @@
 }
 body {
   background: #fff; 
+  height: 100%;
  }
-.header {
-  background: url("https://images.unsplash.com/photo-1529770844125-7bf65c3e29fa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a7715ffde26c30ea8593ac87a4318a1c&auto=format&fit=crop&w=700&q=60") center no-repeat;
-  background-size: cover;
-  padding: 0 !important;
-  margin: 0;
-	font-family: "shadows into light";
-}
-
-.header .title {
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    font-size: 4rem;
-    height: 150px;
-    font-weight: 500;
-    text-align: right;
-    padding: 15px 30px;
-    letter-spacing: 0.27em; 
-    margin: 0;}
-  
-  .header span {
-    color: red;
-    font-size: 5rem;
-    text-shadow: .9px .9px .9px white;
-    position: relative;
-    top: 3px;
-    font-weight: bold; }
 
 .welcome{
    background: rgba(0, 0, 0, 0.7);
@@ -134,9 +109,7 @@ body {
   display: flex;
   padding: 0;
 }
-.item{
-  display: none;
-}
+
 .menu a:hover {
   color: rgba( 0, 0, 0, 0.5);
   text-decoration: none;
@@ -155,25 +128,27 @@ body {
 /*------------------MAIN------------------------*/
 .mainpage{
   height: 100vh;
+  min-height: 600px;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
+  transform-style: preserve-3d;
   position: relative;
   top: 0;
 }
 .mainhead{
   height: 100vh;
   min-height: 600px;
-  position: relative;
+  position: static;
   display: flex;
   overflow: hidden;
-
 }
 .mainhead h1{
   margin: auto;
   font-family: "Limelight";
   font-size: 4rem;
   letter-spacing: 1.8rem;
+  transform-style: inherit;
 }
 .parallax::after {
   content: " ";
@@ -183,17 +158,14 @@ body {
   bottom: 0;
   left: 0;
   transform: translateZ(-1px) scale(2);
-  background-size: 100%;
   z-index: -1;
   background: url("../images/colorbomb.jpg") center no-repeat;
   background-size: cover;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+
 }
 
-.mainhead img{
-  width: 700px;
-  margin: auto;
- 
-}
 .main {
   color: black;
   background: rgb(255, 255, 255);
@@ -202,7 +174,6 @@ body {
 	font-size: 1.3rem;
   width: 100%;
   border-top: 20px solid black;
-
 }
 
 .maincontent{
@@ -215,24 +186,10 @@ body {
   min-height: 600px;
   border-bottom: 20px solid black;
 }
-
-/* .main .img-container {
-  width: 40%;
-  margin: auto;
-} */
-/* .caption1{
-  color: white;
-}
-
-.main .mirim img {
-  width: 90%;
-  margin: auto;
-} */
-
 .about {
   width: 100%;
   padding: 40px 20%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   margin: auto;
   height: 100%;
   display: flex;
@@ -244,37 +201,26 @@ body {
 .about p{
   margin-bottom: 20px;
 }
-.main ul {
-	list-style: none;
-	 font-family: "shadows into light";
-}
 .showings{
   height: 100vh;
   min-height: 600px;
+
 }
 .showings h1{
   width: 100%;
   text-align: center;
   font-family: "Poiret One";
   font-size: 3.5rem;
-  height: 100%;
+  height: 150px;
 }
 /*-----------------------GALLERY-----------------------*/
-.gallerypage{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgb(255, 255, 255);
-  width: 100%;
-}
-
 .gallery{
   width: 80%;
-  margin: 150px 10%;
+  min-width: 1000px;
+  margin: 0 10%;
   display: flex;
-  /* justify-content: center;
-  align-content: center; */
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 .gallery h1{
@@ -284,13 +230,20 @@ body {
   border-bottom: 2px solid black;
   width: 100%;
   margin-bottom: 50px;
+  margin-top: 130px;
+}
+
+.imagecontainer{
+  width: 25%;
+  position: relative;
+  margin: 15px auto;
 }
 .imagecon{
   transition: all 0.3s ease;
   position: relative;
-  width: 22%;
+  width: 95%;
   height: 350px;
-  margin: 15px auto;
+  margin: auto;
   border-radius: 10%;
   border: black solid 2px;
   overflow: hidden;
@@ -367,31 +320,46 @@ body {
 }
 /*-----------------------CONTACT-----------------------*/
 .contactpage{
-  display: none;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  overflow: hidden;
   width: 100%;
 }
-.contacthead{
-  background: url("../images/contact.jpg") 80% 50%;
-  background-size: cover;
-  height: 350px;
+.contactmain{
+  background: #52A0AA;
+  background: linear-gradient(to left, #52A0AA, #d3d3d3, #E03F75);
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: rgb(73, 73, 73);
 }
-.contactoverlay{
-  background: rgba(0, 0, 0, 0.6);
-  height: 200px;
-  position: relative;
-  top: 150px;
-  font-family: "allura";
-  color: white;
+.contactmain h1{
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Raleway";
 }
-.contactoverlay h1{
-  font-size: 9rem;
-  margin: auto 80px;
-  align-self: center;
+.contactmain i{
+  font-size: 2rem;
+  padding: 40px 0 0 0;
+  transition: all .3s ease;
 }
+.contactmain i:hover{
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.contactmain a{
+  color: inherit;
+  height: 40px;
+}
+.contactmain a:hover{
+  color: inherit;
+  text-decoration: none;
+}
+
 .contact {
 	color: rgb(50, 50, 50);
 	margin: 0;
@@ -399,8 +367,8 @@ body {
 	font-family: "Raleway";
   font-size: 1.2rem;
   background: white;
-  height: 100vh;
-  min-height: 550px;
+  height: 92vh;
+  min-height: 650px;
   display: flex;
 }
 .contact h2 {
@@ -429,7 +397,7 @@ body {
 
 .contactform input[type=submit] {
   width: 100%;
-  background-color: rgb(216, 1, 1);
+  background-color: #52A0AA;
   color: black;
   padding: 14px 20px;
   margin: 8px 0;
@@ -440,7 +408,7 @@ body {
 }
 
 .contactform input[type=submit]:hover {
-  background-color: rgb(240, 3, 3);
+  background-color: rgb(92, 168, 179);
   border-top: 2px solid rgb(50, 50, 50);
   border-left: 2px solid rgb(50, 50, 50);
 }
@@ -459,56 +427,198 @@ body {
   /*-------------------FOOTER----------------*/
 
  .footer {
-  padding: 10px 0;
-  margin: 0;
-  text-align: center;
+    padding-top: 40px;
+    margin: 0;
+    height: 80px;
+    text-align: center;
+    font-family: "Poiret One";
+    font-size: 1.3rem;
+    position: relative;
+    align-self: end;
+}
+.login-button{
+  position: absolute;
+  left: 20px;
+}
+.login-button a{
+  color: black;
+  text-decoration: none;
+}
+.login-button a:hover{
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 .footer ul{
   margin: 0;
 }
-
+.footer p{
+  margin-bottom: 0;
+}
 .footer li {
   list-style: none;
   display: inline-block;
-  font-size: 1.4rem;
   color: black;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   padding: 0 1%;
 }
 
 
-.contactmain{
-  background: #c0392b;
-background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);
-background: linear-gradient(to right, #8e44ad, #c0392b);
-height: 100vh;
-min-height: 500px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-content: center;
-color: white;
-}
-.contactmain h1{
+.loginpage{
+  font-family: "Poiret One";
+  min-height: 100vh;
   width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Raleway";
+  padding-top: 150px;
+  display: grid;
+  background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
 }
-.contactmain i{
-  font-size: 2rem;
-  padding: 40px 0 0 0;
-  transition: all .3s ease;
+.login{
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 50px 150px;
+  font-size: 1.3rem;
+  height: 400px;
 }
-.contactmain i:hover{
-  font-size: 2.2rem;
+.login input{
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px auto;
+  padding: 8px;
+}
+.login form{
+  display: flex;
+  flex-wrap: wrap;
+}
+.login button{
+  margin: 5px auto;
+  border: 1px solid rgba( 0, 0, 0, 0.8);
+  border-radius: 4px;
+  width: 400px;
+  padding: 8px;
+  background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
+}
+.login button:focus{
+  outline: none;
+  position: relative;
+  top: 1px; 
+}
+.login button:hover{
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  /* border-bottom: 1px solid  black;
+  border-right: 1px solid  black;  */
+}
+.login h3{
+  margin: auto;
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+}
+.gallery-button{
+  width: 100%;
+  display: flex;
+}
+.gallery a{
+  width: 200px;
+  margin: 10px auto;
+}
+
+.gallery button {
+  font-size: 1.3rem;
+  font-family: "Poiret One";
+  padding: 5px;
+  margin: auto;
+  background: transparent;
+  color: black;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 200px;
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.gallery button:focus{
+  outline: none;
+  position: relative;
+  top: 1px;
+}
+.gallery button:hover{
+  background: rgba( 0, 0, 0, 0.7);
+  color: white;
   cursor: pointer;
 }
-.contactmain a{
-  color: inherit;
-  height: 40px;
+.addpage{
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 150px;
+  background: white;
+  font-family: "Poiret One";
+  display: grid;
+  background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
 }
-.contactmain a:hover{
-  color: inherit;
-  text-decoration: none;
+.add {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 50px 150px;
+  font-size: 1.3rem;
+  height:530px;
+  
 }
+.add-form{
+  display: flex;
+  flex-wrap: wrap;
+}
+.add-form input{
+  width: 550px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px auto;
+  background: white;
+  color: black;
+  padding: 8px;
+}
+.add-form input[type=file]{
+  background: white;
+}
+.add-form button{
+  margin: 5px auto;
+  border: 1px solid rgba( 0, 0, 0, 0.8);
+  /* border: 1px solid rgba(255, 255, 255, 0.6); */
+  border-radius: 4px;
+  width: 550px;
+  padding: 8px;
+  background: linear-gradient(to right, #52A0AA, #dfdfdf, #E03F75);
+  transition: all 0.3s ease;
+  color: black;
+}
+.add-form button:focus{
+  outline: none;
+  position: relative;
+  top: 1px;  
+}
+.add-form button:hover{
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  /* border-bottom: 1px solid  black;
+  border-right: 1px solid  black; 
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent; */
+}
+.add h1{
+  margin: auto;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+
+
+.page{
+  display: none;
+}
+
+
+

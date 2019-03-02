@@ -1,27 +1,69 @@
 const express = require("express"),
+      exphbs = require('express-handlebars'),
+      fs = require('fs'),
 	  bodyParser = require("body-parser"),
       nodemailer = require("nodemailer"),
       mongoose = require('mongoose'),
-      exphbs = require('express-handlebars')
-	  app = express();
+      flash = require('connect-flash'),
+      session = require('express-session'),
+      passport = require('passport'),
+      multer = require('multer'),
+      upload = multer({ dest: 'uploads/' }),
+      app = express();
+     
+
+//Load routes
+const gallery = require('./routes/gallery');
+const users = require('./routes/users');
+
+//Passport Config
+require('./config/passport')(passport);
 
 
-
-//mongoose
+//Connect to mongoose
 mongoose.connect('mongodb://localhost:27017/maxineart', {
     useNewUrlParser: true
 })
 .then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
 
-//ADD Gallery model
 
-
+// Handlebars middleware
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
 app.set("view engine", "handlebars");
+
+
+//Express session middleware
+app.use(session({
+    secret:'secret',
+    resave: true,
+    saveUninitialized: true
+}));
+
+
+//Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Connect Flash middleware
+app.use(flash());
+
+//Global variables
+app.use(function(req, res, next){
+    res.locals.user = req.user || null;
+    next();
+})
+
+
+//Bodyparser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+app.use(multer({ dest: './uploads/'}).single('image'));
 
 app.use(express.static(__dirname));
 
@@ -31,17 +73,8 @@ app.get("/", function(req, res){
     res.render('index');
 });
 
-app.get("/main", function(req, res){
-    res.render('main');
-})
 
-app.get("/gallery", function(req, res){
-	res.render('gallery');
-});
-
-app.get('/gallery/add', function(req, res){
-    res.render("add")
-});
+//Contact routes
 
 app.get("/contact", function(req, res){
 	res.render('contact');
@@ -95,6 +128,11 @@ app.post("/contact", function(req, res){
 });
 
 
+
+//Use routes
+
+app.use('/gallery', gallery);
+app.use('/users', users);
 
 
 // app.listen(process.env.PORT, process.env.IP, function(){

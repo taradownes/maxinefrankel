@@ -1,8 +1,19 @@
-<h1>Add a gallery photo</h1>
+<div class="page">
+    <div class="addpage">
+        <div class="add">
+        
 
-<form action="/gallery" method="POST">
-    <input type="text" placeholder="Image URL" name="image url">
-    <input type="text" placeholder="painting title" name="painting_title">
-    <input type="text" placeholder="painting style" name="painting_style">
-    <input type="text" placeholder="date" name="date">
-</form>
+            <form action="/gallery" id="uploadbanner" enctype="multipart/form-data" method="POST" class="add-form">
+            <h1>Add a Gallery Image</h1>
+                <input id="fileupload" type="file" name="image" value="Image">
+                <input type="text" placeholder="Painting Title" name="title" required>
+                <input type="text" placeholder="Painting Style" name="style" required>
+                <input type="text" placeholder="Date" name="date" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    {{> _footer}}
+    </div>
+</div>
+
