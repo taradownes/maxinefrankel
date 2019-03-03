@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 
 const ImageSchema = new Schema({
     image: {
-        data: Buffer,
-        contentType: String
+        type: String,
+        required: true
         },
     title: {
         type: String,
@@ -19,10 +19,6 @@ const ImageSchema = new Schema({
     date: {
         type: String,
         required: true
-    },
-    inputDate: {
-        type: Date,
-        default: Date.now
     }
 });
 

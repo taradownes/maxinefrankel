@@ -2,14 +2,10 @@
   <div class="gallery"> 
     <h1>Paintings by Maxine</h1>
     {{#if user}}
-    <div class="gallery-button">
-        <a href="/gallery/add" class="item-link"><button>Add Images</button></a>
+    <div class="add-button">
+        <a href="/gallery/add" class="item-link"><button class="gallery-button"> Add Images</button></a>
     </div>
-    {{else}}
-
-    {{/if}}
-
-    {{#each images}}
+        {{#each images}}
 <div class="imagecontainer">
     
 <div class="imagecon lightbox_trigger">
@@ -19,34 +15,48 @@
                 <li>{{date}}</li>
             </ul>
             <img src="{{image}}" alt="Pic" class="image">
- </div>
-     {{#if user}}
-    <div class="image-button">
-        <a href="/gallery/edit/{{id}}" class="item-link"><button>Edit</button></a>
+ </div>  
+    <div class="image-button-con">
+        <a href="/gallery/edit/{{id}}" class="item-link"><button class="image-button">Edit</button></a>
     </div>
-      <div class="image-button">
-        <a href="/gallery/delete/{{id}}" class="item-link"><button>Delete Image</button></a>
+      <div class="image-button-con"> 
+        <form action="/gallery/{{id}}?_method=DELETE" method='POST'>
+            <input type="hidden" name='_method' value="PUT">
+            <input class="image-button" type="submit" value="Delete">
+        </form>
     </div>
-    {{else}}
-     <div class="image-button">
-        <a href="/gallery/edit/:{{id}}" class="item-link"><button>Edit</button></a>
     </div>
-      <div class="image-button">
-        <a href="/gallery/delete/:{{id}}" class="item-link"><button>Delete Image</button></a>
-</div>
-</div>
-    {{/if}}
 {{else}}
 
+<p>Problem Loading Gallery...</p>
+{{/each}}
+   
+ {{else}}
 
+            {{#each images}}
+<div class="imagecontainer">
+<div class="imagecon lightbox_trigger">
+            <ul class="caption">
+                <li>{{title}}</li>
+                <li>{{style}}</li>
+                <li>{{date}}</li>
+            </ul>
+            <img class="image" src="{{image}}" alt="Pic">
+ </div>
+ </div>
+             {{else}}
 
 <p>Problem Loading Gallery...</p>
 
-{{/each}}
+            {{/each}}
+ 
+{{/if}}
+
+
   
 
-{{> _footer}}
 </div>
+{{> _footer}}
 
 
 
