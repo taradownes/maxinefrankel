@@ -11,57 +11,6 @@ body {
   height: 100%;
  }
 
-.welcome{
-   background: rgba(0, 0, 0, 0.7);
-   height: 60vh;
-   margin: 20vh 0;
-   font-family: "shadows into light";
-   display: flex;
-   align-content: center;
-   display: flex;
-   flex-wrap: wrap;
-  }
-    
-.welcome .title {
-    color: white;
-    font-size: 8rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 15px 30px;
-    letter-spacing: 0.1em; 
-    margin-bottom: 0;
-    width: 100%;
-  }
-.welcome span {
-    color: red;
-    font-size: 8.5rem;
-    text-shadow: .9px .9px .9px white;
-    position: relative;
-    top: 3px;
-    font-weight: bold; }
-.welcome button{
-  color: white;
-  border: white 2px solid;
-  padding: 0 60px;
-  margin: auto;
-  font-size: 2.5rem;
-  background: transparent;
-  transition: all 0.5s ease;
-  margin-top: 80px;
-}
-.welcome button:hover{
-  background: white;
-  color: black;
-}
-.welcome button a{
-  color: inherit;
-  text-decoration: none;
-}
-.welcome button a:hover{
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /*------------NAVIGATION--------------*/
 .top{
   position: absolute;
@@ -75,13 +24,11 @@ body {
   justify-content: flex-end;
   height: 45px;
   width: 75%;
-
 }
 .logo{
   width: 25%;
 }
 .logo img{
-  width: 160px;
   color: black;
   cursor: pointer;
   margin: 0;
@@ -94,9 +41,7 @@ body {
 }
 .menu a {
   color: black;
-  font-size: 1rem;
   letter-spacing: 0.3rem;
-  padding: 0 20px;
   outline: none;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -105,7 +50,6 @@ body {
 }
 .menu ul{
   list-style: none;
-  margin: 25px 0 0 0;
   display: flex;
   padding: 0;
 }
@@ -116,14 +60,11 @@ body {
 }
 .overlay i{
   padding: 20px;
-  font-size: 2.0rem;
   cursor: pointer;
   color: black;
   margin: auto 0;
 }
-.overlay i:active{
-  font-size: 1.7rem;
-}
+
 
 /*------------------MAIN------------------------*/
 .mainpage{
@@ -146,9 +87,9 @@ body {
 .mainhead h1{
   margin: auto;
   font-family: "Limelight";
-  font-size: 4rem;
   letter-spacing: 1.8rem;
   transform-style: inherit;
+  text-align: center;
 }
 .parallax::after {
   content: " ";
@@ -188,7 +129,6 @@ body {
 }
 .about {
   width: 100%;
-  padding: 40px 20%;
   background: rgba(255, 255, 255, 0.7);
   margin: auto;
   height: 100%;
@@ -210,32 +150,27 @@ body {
   width: 100%;
   text-align: center;
   font-family: "Poiret One";
-  font-size: 3.5rem;
   height: 150px;
 }
 /*-----------------------GALLERY-----------------------*/
 .gallery{
   width: 80%;
-  margin: 0 10%;
+  margin: 0 10% 20px 10%;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 }
 .gallery h1{
-  font-size: 3.5rem;
   text-align: center;
   font-family: "Limelight";
   border-bottom: 2px solid black;
   width: 100%;
-  margin-bottom: 50px;
   margin-top: 80px;
 }
-
 .imagecontainer{
-  width: 300px;
   position: relative;
-  margin: 15px auto;
+  margin: 26px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -244,8 +179,8 @@ body {
 .imagecon{
   transition: all 0.3s ease;
   position: relative;
-  height: 300px;
   width: 95%;
+  height: inherit;
   margin: auto;
   border-radius: 10%;
   border: black solid 2px;
@@ -265,7 +200,6 @@ body {
 .caption{
   color: transparent;
   background: transparent;
-  font-size: 1.3rem;
   font-weight: 900;
   position: absolute;
   list-style: none;
@@ -318,7 +252,7 @@ body {
   align-self: center;
 }
 #lightbox img{
-  height: 75vh;
+  height: 70vh;
   margin: 10vh auto 0 auto;
 }
 .lightbox-caption{
@@ -326,7 +260,6 @@ body {
   margin: auto;
   color: white;
   list-style: none;
-  font-size: 1.4rem;
 }
 /*-----------------------CONTACT-----------------------*/
 .contactpage{
@@ -353,12 +286,10 @@ body {
   font-family: "Raleway";
 }
 .contactmain i{
-  font-size: 2rem;
   padding: 40px 0 0 0;
   transition: all .3s ease;
 }
 .contactmain i:hover{
-  font-size: 2.2rem;
   cursor: pointer;
 }
 .contactmain a{
@@ -375,30 +306,26 @@ body {
 	margin: 0;
 	padding: 40px;
 	font-family: "Raleway";
-  font-size: 1.2rem;
   background: white;
   height: 92vh;
   min-height: 650px;
   display: flex;
 }
 .contact h2 {
-  font-size: 5.5rem;
   text-align: center;
-  font-family: "Allura";
+  font-family: "Poiret One";
   border-bottom: 2px solid black;
-  margin-bottom: 50px;
 }
 
 .contactform {
-	width: 45% !important;
   margin: auto;
+  font-size: 1.2rem;
 }
 
 
 .contactform input {
   width: 100%;
   color: black;
-  padding: 12px 20px;
   margin: 0px 0px 15px 0px;
   display: inline-block;
   border: 1px solid rgb(50, 50, 50);
@@ -409,7 +336,6 @@ body {
   width: 100%;
   background-color: #52A0AA;
   color: black;
-  padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -427,28 +353,24 @@ body {
   width: 100%;
   color: black;
   height: 200px;
-  padding: 12px 20px;
   box-sizing: border-box;
   border: 1px solid rgb(50, 50, 50);
   background-color: rgba(255, 255, 255, 0.9);
-  font-size: 1.2rem;
   resize: none;
 }
   /*-------------------FOOTER----------------*/
 
  .footer {
-    padding-top: 40px;
+    /* padding-top: 40px; */
     margin: 0;
     height: 80px;
     text-align: center;
     font-family: "Poiret One";
-    font-size: 1.3rem;
     position: relative;
     align-self: end;
 }
 .login-button{
-  position: absolute;
-  left: 20px;
+  position: relative;
 }
 .login-button a{
   color: black;
@@ -466,36 +388,32 @@ body {
 }
 .footer li {
   list-style: none;
-  display: inline-block;
   color: black;
   letter-spacing: 0.3rem;
-  padding: 0 1%;
+  padding: 0 2%;
 }
 
+/* LOGIN AND ADD */
 
 .loginpage{
   font-family: "Poiret One";
   min-height: 100vh;
   width: 100%;
-  padding-top: 150px;
   display: grid;
   background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
 }
 .login{
-  width: 800px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 50px 150px;
-  font-size: 1.3rem;
-  height: 400px;
 }
 .login input{
-  width: 400px;
   border: 1px solid black;
   border-radius: 4px;
   margin: 5px auto;
-  padding: 8px;
+  background: white;
+  color: black;
+  
 }
 .login form{
   display: flex;
@@ -505,8 +423,8 @@ body {
   margin: 5px auto;
   border: 1px solid rgba( 0, 0, 0, 0.8);
   border-radius: 4px;
-  width: 400px;
   padding: 8px;
+  color: black;
   background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
 }
 .login button:focus{
@@ -521,7 +439,6 @@ body {
 .login h3{
   margin: auto;
   padding-bottom: 20px;
-  font-size: 2.5rem;
 }
 .add-button{
   display: flex;
@@ -531,9 +448,7 @@ body {
   margin: auto;
 }
 .gallery-button {
-  font-size: 1.3rem;
   font-family: "Poiret One";
-  padding: 5px;
   background: transparent;
   color: black;
   outline: none;
@@ -565,8 +480,6 @@ body {
   color: black;
   border-radius: 8px;
   border: rgb(10, 10, 50) 1px solid;
-  width: 100px;
-  padding: 5px;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -581,34 +494,26 @@ body {
 .addpage{
   min-height: 100vh;
   width: 100%;
-  padding-top: 150px;
   background: white;
   font-family: "Poiret One";
   display: grid;
   background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
 }
 .add {
-  width: 800px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 50px 150px;
-  font-size: 1.3rem;
-  height:530px;
-  
+  margin: 0 auto;  
 }
 .add-form{
   display: flex;
   flex-wrap: wrap;
 }
 .add-form input{
-  width: 550px;
   border: 1px solid black;
   border-radius: 4px;
   margin: 5px auto;
   background: white;
   color: black;
-  padding: 8px;
 }
 .add-form input[type=file]{
   background: white;
@@ -618,9 +523,7 @@ body {
   border: 1px solid rgba( 0, 0, 0, 0.8);
   /* border: 1px solid rgba(255, 255, 255, 0.6); */
   border-radius: 4px;
-  width: 550px;
-  padding: 8px;
-  background: linear-gradient(to right, #52A0AA, #dfdfdf, #E03F75);
+  background: linear-gradient(to left, #52A0AA, #dfdfdf, #E03F75);
   transition: all 0.3s ease;
   color: black;
 }
@@ -635,14 +538,347 @@ body {
 }
 .add h1{
   margin: auto;
-  font-size: 2.5rem;
   padding-bottom: 20px;
 }
-
-
 .page{
   display: none;
 }
+
+/*-------------- MEDIA QUERIES -----------*/
+
+@media screen and (min-width: 1224px) {
+  .mainhead h1{
+    font-size: 4rem;
+  }
+  .logo img{
+    width: 160px;
+  }
+  .menu a{
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  .menu ul{
+    margin: 25px 0 0 0;
+  }
+  .overlay i{
+    font-size: 2.0rem;
+  }
+  .overlay i:active{
+    font-size: 1.7rem;
+  }
+  .about{
+    font-size: 1.3rem;
+    padding: 40px 20%;
+  }
+  .showings h1{
+    font-size: 3.5rem;
+  }
+  /* GALLERY */
+  .gallery h1{
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+  }
+  .imagecontainer{
+    width: 300px;
+    height: 300px;
+  }
+  .caption{
+    font-size: 1.3rem;
+  }
+  .lightbox-caption{
+    font-size: 1.4rem;
+  }
+  /* CONTACT */
+  .contactmain i{
+    font-size: 2rem;
+  }
+  .contactmain i:hover{
+    font-size: 2.2rem;
+  }
+  .contact h2{
+    font-size: 4.5rem;
+    margin-bottom: 50px;
+  }
+  .contactform{
+    width: 45%;
+  }
+  .contactform input{
+    padding: 12px 20px;
+  }
+  .contactform input[type=submit] {
+    padding: 14px 20px;
+  }
+  .contactform textarea {
+    padding: 12px 20px;
+  }
+  /* LOGIN AND ADD PAGES */
+  .loginpage, .addpage{
+    padding-top: 130px;
+  }
+  .login{
+    width: 800px;
+    padding: 50px 150px;
+    font-size: 1.3rem;
+    height: 380px;
+  }
+  .add{
+    width: 800px;
+    padding: 50px 150px;
+    font-size: 1.3rem;
+    height: 500px;
+  }
+  .login input, .add input{
+    width: 400px;
+    padding: 8px;
+  }
+  .login button, .add button{
+    width: 400px;
+    padding: 8px
+  }
+  .login h3, .add h1{
+    font-size: 2.5rem;
+  }
+  .gallery-button{
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+  .image-button{
+    width: 100px;
+    padding: 5px;
+  }
+
+  /* FOOTER */
+  .footer{
+    font-size: 1.3rem;
+  }
+  .footer li{
+    display: inline-block;
+  }
+}
+
+
+@media screen and (max-width: 1224px) {
+  .mainhead h1{
+    font-size: 4rem;
+  }
+  .logo img{
+    width: 160px;
+  }
+  .menu a{
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  .menu ul{
+    margin: 25px 0 0 0;
+  }
+  .overlay i{
+    font-size: 2.0rem;
+  }
+  .overlay i:active{
+    font-size: 1.7rem;
+  }
+  .about{
+    font-size: 1.3rem;
+    padding: 40px 20%;
+  }
+  .showings h1{
+    font-size: 3.5rem;
+  }
+    /* GALLERY */
+    .gallery h1{
+      font-size: 3.5rem;
+      margin-bottom: 50px;
+    }
+    .imagecontainer{
+      width: 300px;
+      height: 300px;
+    }
+    .caption{
+      font-size: 1.3rem;
+    }
+    .lightbox-caption{
+      font-size: 1.4rem;
+    }
+      /* CONTACT */
+  .contactmain i{
+    font-size: 2rem;
+  }
+  .contactmain i:hover{
+    font-size: 2.2rem;
+  }
+  .contact h2{
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+  .contactform{
+    width: 45%;
+  }
+  .contactform input{
+    padding: 12px 20px;
+  }
+  .contactform input[type=submit] {
+    padding: 14px 20px;
+  }
+  .contactform textarea {
+    padding: 12px 20px;
+  }
+   /* LOGIN AND ADD PAGES */
+   .loginpage, .addpage{
+    padding-top: 150px;
+  }
+  .login{
+    width: 800px;
+    padding: 50px 150px;
+    font-size: 1.3rem;
+    height: 380px;
+  }
+  .add{
+    width: 800px;
+    padding: 50px 150px;
+    font-size: 1.3rem;
+    height: 500px;
+  }
+  .login input, .add input{
+    width: 400px;
+    padding: 8px;
+
+  }
+  .login button, .add button{
+    width: 400px;
+    padding: 8px;
+  }
+  .login h3, .add h1{
+    font-size: 2.5rem;
+  }
+  .gallery-button{
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+  .image-button{
+    width: 100px;
+    padding: 5px;
+  }
+  /* FOOTER */
+  .footer{
+    font-size: 1.3rem;
+  }
+  .footer li{
+    display: inline-block;
+  }
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .mainhead h1{
+    font-size: 2rem;
+  }
+  .logo img{
+    width: 80px;
+  }
+  .menu a{
+    font-size: .6rem;
+    padding: 0 10px;
+  }
+  .menu ul{
+    margin: 12px 0 0 0;
+  }
+  .overlay i{
+    font-size: 1.0rem;
+  }
+  .overlay i:active{
+    font-size: .9rem;
+  }
+  .about{
+    font-size: 0.8rem;
+    padding: 20px 5%;
+  }
+  .showings h1{
+    font-size: 2.0rem;
+  }
+    /* GALLERY */
+    .gallery h1{
+      font-size: 2.0rem;
+      margin-bottom: 10px;
+    }
+    .imagecontainer{
+      width: 200px;
+      height: 200px;
+    }
+    .caption{
+      font-size: 1.0rem;
+    }
+    .lightbox-caption{
+      font-size: 1.1rem;
+    }
+    /* CONTACT */
+    .contactmain h1{
+      font-size: 1.3em;
+    }
+    .contactmain i{
+      font-size: 1.7rem;
+    }
+    .contactmain i:hover{
+      font-size: 1.9rem;
+    }
+    .contact h2{
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .contactform{
+      width: 95%;
+    }
+    .contactform input{
+      padding: 6px 10px;
+    }
+    .contactform input[type=submit] {
+      padding: 6px 10px;
+    }
+    .contactform textarea {
+      padding: 6px 10px;
+    }
+  /* LOGIN AND ADD PAGES */
+  .loginpage, .addpage{
+    padding-top: 50px;
+  }
+  .login{
+    width: 325px;
+    padding: 5px;
+    font-size: 1rem;
+    height: 250px;
+  }
+  .add{
+    width: 325px;
+    padding: 5px;
+    font-size: 1rem;
+    height: 350px;
+  }
+  .login input, .add input{
+    width: 300px;
+    padding: 2px;
+  }
+  .login button, .add button{
+    width: 300px;
+    padding: 2px;
+  }
+  .login h3, .add h1{
+    font-size: 2rem;
+  }
+  .gallery-button{
+    font-size: 1rem;
+    padding: 2px;
+  }
+  .image-button{
+    width: 70px;
+    padding: 1px;
+  }
+    /* FOOTER */
+    .footer{
+      font-size: .8rem;
+    }
+    .footer li{
+      display: block;
+    }
+  }
 
 
 

@@ -22,10 +22,12 @@ const contact = require('./routes/contact');
 //Passport Config
 require('./config/passport')(passport);
 
+//Load keys
+const keys = require('./config/keys');
 
 //Connect to mongoose
-mongoose.connect('mongodb://localhost:27017/maxineart', {
-    useNewUrlParser: true
+mongoose.connect(keys.mongoURI, {
+    useNewUrlParser: true    
 })
 .then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
@@ -89,10 +91,10 @@ app.use('/users', users);
 app.use('/contact', contact);
 
 
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("server started");
-// });
-
-app.listen(2000, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("server started");
 });
+
+// app.listen(2000, function(){
+//     console.log("server started");
+// });
